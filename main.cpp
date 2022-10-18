@@ -2,6 +2,7 @@
 #include <ctime>
 #include "ArrayGraphic.h"
 using namespace std;
+//mitsuha1@outlook.com
 int main() {//a=3 b=6
     srand((unsigned)time(NULL));
     int number1 =(rand() % (6-3))+ 3;
