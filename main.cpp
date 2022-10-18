@@ -19,22 +19,22 @@ int main() {//a=3 b=6
             grp[i][1]=y;
             delete[] grp[i];
         }
-        arrayGraphic.addgraphic(j,grp);
+        arrayGraphic.addgraphic(j,grp,number2);
         delete[] grp;
     }
     for(int i=0;i<number1;i++)
     {
         int **getingo = arrayGraphic.showxy(i);
-        int z = sizeof (getingo)/sizeof (getingo[0]);
-        for(int j=0;j<sizeof (getingo)/sizeof (getingo[0]);j++)
+        for(int j=0;j<arrayGraphic.y[i];j++)
         {
-            int t1 = getingo[j][0];
-            int t2 = getingo[j][1];
+            int &t1 = getingo[j][0];
+            int &t2 = getingo[j][1];
             int t3= 0;
             cout<<'['+getingo[j][0]+'  '+getingo[j][1]+']'+' '<<endl;
         }
 
     }
+
 
     return 0;
 }

@@ -15,6 +15,9 @@ protected:
     int center =0;
     int **macciv;
 public:
+    int x=2;
+    int *y = new int[z];
+    int z;
     /*explicit Graphic(int number){
         this->gragol=number;
         this->macciv = new int*[gragol];
@@ -29,7 +32,7 @@ public:
             delete[] macciv[i];
         delete[] macciv;
     }*/
-    virtual void addgraphic(int index,int **mas)=0;
+    virtual void addgraphic(int index,int **mas,int number2)=0;
     virtual void addgraphic(int **mas)=0;
     virtual void movegraphic(int index,bool *wasd[],int *number[]) = 0;
     virtual void bigsmall(int number) = 0;

@@ -1,7 +1,7 @@
 //
 // Created by com12 on 2022/10/17.
 //
-
+//mitsuha1@outlook.com
 #ifndef Z4_ARRAYGRAPHIC_H
 #define Z4_ARRAYGRAPHIC_H
 #include <iostream>
@@ -13,11 +13,12 @@ class ArrayGraphic:public Graphic
 {
 protected:
     int more;
-    int ***massivgra;
+
 public:
+    int ***massivgra;
     explicit ArrayGraphic(int number)//指示形状数量
     {
-        this->more=number;
+        this->z=number;
         this->massivgra = new int**[number];
     }
     ~ArrayGraphic()
@@ -30,8 +31,9 @@ public:
         }
         delete[] massivgra;
     }
-    void addgraphic(int index,int **mas) override//添加图形(你可以说覆盖图形）
+    void addgraphic(int index,int **mas,int number2) override//添加图形(你可以说覆盖图形）
     {
+        y[index] = number2;
         massivgra[index]= mas;
     }
     void addgraphic(int **mas) override//添加图形
@@ -72,6 +74,10 @@ public:
     {
         return massivgra[index];
     }
+    /*int []showxyy(int index,int index1)
+    {
+        int massivgra[index]
+    }*/
     int * area(int index) override//对图形区域的显示
     {
         int *x[gragol];
